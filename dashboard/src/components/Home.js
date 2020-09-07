@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import Person from '@material-ui/icons/Person';
 import Group from '@material-ui/icons/Group';
@@ -11,8 +10,8 @@ import {
   IconButton,
   CardHeader
 } from '@material-ui/core';
-import CourseChart from './CourseChart.js';
-import StudentsChart from './StudentsChart.js';
+import CourseChart from './Courses/CourseChart.js';
+import StudentsChart from './Students/StudentsChart.js';
 
 const useStyles = makeStyles({
   header: {
@@ -64,7 +63,7 @@ const useStyles = makeStyles({
   }
 });
 
- const Home = (props) => {
+export default function Home(props) {
   const classes = useStyles();
 
   return (
@@ -130,13 +129,3 @@ const useStyles = makeStyles({
     </React.Fragment>
   );
 };
-
-const mapStateToProps = state => ({
-
-});
-
-const mapDispatchToProps = {
-
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home);

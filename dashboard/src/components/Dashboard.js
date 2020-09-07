@@ -84,7 +84,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Dashboard = (props) => {
+export default function Dashboard(props) {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(true);
@@ -200,5 +200,3 @@ const Dashboard = (props) => {
     </div>
   );
 };
-
-export default Dashboard;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   Button,
@@ -55,7 +54,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const LoginPage = props => {
+export default function LoginPage(props) {
   const classes = useStyles();
   const [userName, setUserName] = React.useState('');
   const [password, setPassword] = React.useState('');
@@ -164,11 +163,3 @@ const LoginPage = props => {
     </React.Fragment>
   );
 };
-
-const mapStateToProps = state => ({
-});
-
-const mapDispatchToProps = {
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);

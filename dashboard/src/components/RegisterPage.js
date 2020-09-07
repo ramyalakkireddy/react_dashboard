@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { Button, Grid, Typography, CircularProgress, TextField, Container } from '@material-ui/core';
 import Alert from '@material-ui/lab/Alert';
@@ -26,7 +25,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const RegisterPage = props => {
+export default function RegisterPage(props) {
   const classes = useStyles();
   const { message, loading, error } = props;
   const [userName, setUserName] = React.useState('');
@@ -101,11 +100,3 @@ const RegisterPage = props => {
     </Container>
   );
 };
-
-const mapStateToProps = state => ({
-});
-
-const mapDispatchToProps = {
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(RegisterPage);
