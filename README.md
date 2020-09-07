@@ -1,6 +1,6 @@
 ## REACT_REDUX_EXPRESS_APP
 
-This repository has the code to a dashboard which displays basic statistics using  
+This repository has the code to a dashboard which student and course details using  
 React, Redux-Saga, Material-UI Frontend and Node/Express Backend.
 
 ## How to run the API
